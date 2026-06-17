@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - 'packages/*.deb'
+      - '.github/workflows/main.yml'
 
 jobs:
   update-repo:
