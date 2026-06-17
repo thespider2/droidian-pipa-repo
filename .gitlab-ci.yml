@@ -1,0 +1,52 @@
+stages:
+  - build
+  - deploy
+
+update-repo:
+  stage: build
+  image: ubuntu:latest
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "main"
+    - if: $CI_PIPELINE_SOURCE == "web"
+  script:
+    - apt-get update && apt-get install -y gnupg dpkg-dev apt-utils gzip
+    - echo "$GPG_PRIVATE_KEY" | base64 -d | gpg --import --batch
+    - echo "allow-preset-passphrase" > ~/.gnupg/gpg-agent.conf
+    - echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+    - echo "no-tty" >> ~/.gnupg/gpg.conf
+    - gpg-connect-agent reloadagent /bye
+    - mkdir -p public/dists/stable/main/binary-arm64
+    - dpkg-scanpackages --arch arm64 packages > public/dists/stable/main/binary-arm64/Packages
+    - gzip -k -f public/dists/stable/main/binary-arm64/Packages
+    - cd public/dists/stable
+    - |
+      cat << EOF > Release
+      Origin: https://$CI_PROJECT_NAMESPACE.gitlab.io/$CI_PROJECT_NAME
+      Label: Droidian PKG
+      Suite: stable
+      Codename: stable
+      Version: 1.0
+      Architectures: arm64
+      Components: main
+      Description: Droidian Packages
+      EOF
+    - apt-ftparchive release . >> Release
+    - echo "$GPG_PASSPHRASE" | gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --default-key $GPG_KEY_ID --clearsign -o InRelease Release
+    - echo "$GPG_PASSPHRASE" | gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --default-key $GPG_KEY_ID -abs -o Release.gpg Release
+    - cd ../../../
+    - mv packages public/packages
+  artifacts:
+    paths:
+      - public
+
+pages:
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  dependencies:
+    - update-repo
+  script:
+    - echo "Deploying to GitLab Pages..."
+  artifacts:
+    paths:
+      - public
