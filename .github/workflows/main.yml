@@ -61,8 +61,10 @@ jobs:
           echo "$GPG_PASSPHRASE" | gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --default-key $GPG_KEY_ID --clearsign -o InRelease Release
           echo "$GPG_PASSPHRASE" | gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --default-key $GPG_KEY_ID -abs -o Release.gpg Release
 
-      - name: Move packages directory to public
-        run: mv packages public/packages
+      - name: Copy keyring and move packages to public
+        run: |
+          cp droidian-pipa.asc public/
+          mv packages public/packages
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
