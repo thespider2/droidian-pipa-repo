@@ -85,6 +85,8 @@ jobs:
       - name: Copy keyring and move packages to public
         run: |
           cp droidian-pipa.asc public/
+          # Exclude large .img files from Pages (hosted via LFS on main branch)
+          rm -f packages/*.img
           mv packages public/packages
 
       - name: Deploy to GitHub Pages
