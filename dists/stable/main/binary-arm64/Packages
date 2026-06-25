@@ -1,0 +1,149 @@
+Package: adaptation-droidian-pipa
+Version: 0.41+git20260625181153.c670d05.next.production
+Architecture: arm64
+Maintainer: Ayman RGAB <aymanrgab@gmail.com>
+Installed-Size: 10
+Depends: linux-bootimage-xiaomi-pipa, adaptation-hybris-api33-phone, android-system-gsi-33, adaptation-pipa-configs (= 0.41+git20260625181153.c670d05.next.production), droidian-camera, power-profiles-daemon
+Filename: packages/adaptation-droidian-pipa_0.41+git20260625181153.c670d05.next.production_arm64.deb
+Size: 4316
+MD5sum: 1315c9f4e4ca5a219809044cbfb5a382
+SHA1: cceca21cb0d4e2e6ebd56d1341392b3a1f5acab0
+SHA256: e32b8c790e0a53a9028a590c48cf57919161f0045838c8bc8fa3a0cb441efedf
+Section: metapackages
+Priority: optional
+Description: Droidian adaptation for Xiaomi Pad 6 (pipa) - metapackage
+X-Droidian-Vcs-Revision: c670d05846e094bc09ba5beb85abb5670cfcf7ee
+
+Package: adaptation-pipa-configs
+Source: adaptation-droidian-pipa
+Version: 0.41+git20260625181153.c670d05.next.production
+Architecture: arm64
+Maintainer: Ayman RGAB <aymanrgab@gmail.com>
+Installed-Size: 161
+Depends: dconf-gsettings-backend | gsettings-backend
+Replaces: bluez
+Filename: packages/adaptation-pipa-configs_0.41+git20260625181153.c670d05.next.production_arm64.deb
+Size: 22936
+MD5sum: 8791c21d8cc7f77d6ce243b263958345
+SHA1: c7ed7e4f70a0ebae891bfbbb12f8ab1436122ecf
+SHA256: 9b295d609a947c5c17b4fcc263c13f1ec9d0b224e9410a4b9b67bbb9badd8c8b
+Section: metapackages
+Priority: optional
+Description: Droidian adaptation for Xiaomi Pad 6 (pipa) - configuration files
+X-Droidian-Vcs-Revision: c670d05846e094bc09ba5beb85abb5670cfcf7ee
+
+Package: linux-bootimage-4.19.325-xiaomi-pipa
+Source: linux-android-xiaomi-pipa
+Version: 0.25+git20260625162037.7203113.next.production
+Architecture: arm64
+Maintainer: Droidian Port Maintainer <maintainer@example.com>
+Installed-Size: 426004
+Pre-Depends: flash-bootimage (>= 4)
+Depends: linux-image-4.19.325-xiaomi-pipa (= 0.25+git20260625162037.7203113.next.production)
+Filename: packages/linux-bootimage-4.19.325-xiaomi-pipa_0.25+git20260625162037.7203113.next.production_arm64.deb
+Size: 60296664
+MD5sum: 19c77df4d7c5ba045657086e3bf9676c
+SHA1: d7fc4e4f3da448d49d8bc037e9b515e07f5d89a1
+SHA256: 005ef5cace7d35a2e2950f0020db72b0000a0fb9e1a06a8b21fa6c7c8f19a6b0
+Section: kernel
+Priority: optional
+Description: Linux kernel for Xiaomi Pad 6 (pipa) - Android Boot Image
+ This package contains the Linux kernel for the Xiaomi Pad 6 device.
+ .
+ Note: This package ships an Android Boot Image bundled with Halium's
+ initramfs.
+X-Droidian-Vcs-Revision: 7203113302bbb3102e661aa337d43d30009ea77f
+
+Package: linux-bootimage-xiaomi-pipa
+Source: linux-android-xiaomi-pipa
+Version: 0.25+git20260625162037.7203113.next.production
+Architecture: arm64
+Maintainer: Droidian Port Maintainer <maintainer@example.com>
+Installed-Size: 10
+Depends: linux-bootimage-4.19.325-xiaomi-pipa (= 0.25+git20260625162037.7203113.next.production)
+Filename: packages/linux-bootimage-xiaomi-pipa_0.25+git20260625162037.7203113.next.production_arm64.deb
+Size: 4212
+MD5sum: 3bc55aa1e6a94f5bdc32c759a4f232ec
+SHA1: 3f6c337bb023f937639cac20c1a232ac87debb23
+SHA256: bbc155dc182385c4d4e3ef7c41e0b8f9b185dfbb289eaa80cf66fd0cc4372af0
+Section: kernel
+Priority: optional
+Description: Linux kernel for Xiaomi Pad 6 (pipa) - Android Boot Image (latest)
+ This package depends to the latest kernel bootimage available for the Xiaomi Pad 6.
+X-Droidian-Vcs-Revision: 7203113302bbb3102e661aa337d43d30009ea77f
+
+Package: linux-headers-4.19.325-xiaomi-pipa
+Source: linux-android-xiaomi-pipa
+Version: 0.25+git20260625162037.7203113.next.production
+Architecture: arm64
+Maintainer: Droidian Port Maintainer <maintainer@example.com>
+Installed-Size: 58347
+Depends: linux-image-4.19.325-xiaomi-pipa (= 0.25+git20260625162037.7203113.next.production)
+Filename: packages/linux-headers-4.19.325-xiaomi-pipa_0.25+git20260625162037.7203113.next.production_arm64.deb
+Size: 9072624
+MD5sum: 0136278ed7492897fdd8d3081cb6bf29
+SHA1: 17471c833e656d3addd836444885a5538bac7fd2
+SHA256: 3ceba9aaa9256ed37df364b5633bd98e6c23df50395aeac7c2ea7733fd9a4cf2
+Section: kernel
+Priority: optional
+Description: Linux kernel for Xiaomi Pad 6 (pipa) - Headers
+ This package contains the Linux kernel headers for the Xiaomi Pad 6 device.
+X-Droidian-Vcs-Revision: 7203113302bbb3102e661aa337d43d30009ea77f
+
+Package: linux-headers-xiaomi-pipa
+Source: linux-android-xiaomi-pipa
+Version: 0.25+git20260625162037.7203113.next.production
+Architecture: arm64
+Maintainer: Droidian Port Maintainer <maintainer@example.com>
+Installed-Size: 10
+Depends: linux-headers-4.19.325-xiaomi-pipa (= 0.25+git20260625162037.7203113.next.production)
+Filename: packages/linux-headers-xiaomi-pipa_0.25+git20260625162037.7203113.next.production_arm64.deb
+Size: 4204
+MD5sum: e40f692f185011dbfef54fb8ff9da363
+SHA1: f836d4ff4cde26d339fe0f61cfe4f2f70d97df62
+SHA256: 8ff6ecc6d1934f3930e9bd32fecd9569401dc5ca793a30c71f61a672de03e774
+Section: kernel
+Priority: optional
+Description: Linux kernel for Xiaomi Pad 6 (pipa) - Headers (latest)
+ This package depends to the latest kernel headers available for the Xiaomi Pad 6.
+X-Droidian-Vcs-Revision: 7203113302bbb3102e661aa337d43d30009ea77f
+
+Package: linux-image-4.19.325-xiaomi-pipa
+Source: linux-android-xiaomi-pipa
+Version: 0.25+git20260625162037.7203113.next.production
+Architecture: arm64
+Maintainer: Droidian Port Maintainer <maintainer@example.com>
+Installed-Size: 64024
+Filename: packages/linux-image-4.19.325-xiaomi-pipa_0.25+git20260625162037.7203113.next.production_arm64.deb
+Size: 14704176
+MD5sum: 00f72b489cafe9b663698597935cb3b4
+SHA1: b3e62cb9e32b3b720632b81c965283cc96ae75ea
+SHA256: ec75bd9a4fb4273156e11da2f991c2a76b012a90c767dfbac4be212bc116589a
+Section: kernel
+Priority: optional
+Description: Linux kernel for Xiaomi Pad 6 (pipa)
+ This package contains the Linux kernel for the Xiaomi Pad 6 device.
+ .
+ Note: This package only ships the kernel image and modules, you should probably
+ look at the linux-bootimage-4.19.325-xiaomi-pipa package for a bootimage suitable
+ for Android boot loaders.
+X-Droidian-Vcs-Revision: 7203113302bbb3102e661aa337d43d30009ea77f
+
+Package: linux-image-xiaomi-pipa
+Source: linux-android-xiaomi-pipa
+Version: 0.25+git20260625162037.7203113.next.production
+Architecture: arm64
+Maintainer: Droidian Port Maintainer <maintainer@example.com>
+Installed-Size: 10
+Depends: linux-image-4.19.325-xiaomi-pipa (= 0.25+git20260625162037.7203113.next.production)
+Filename: packages/linux-image-xiaomi-pipa_0.25+git20260625162037.7203113.next.production_arm64.deb
+Size: 4196
+MD5sum: d36fad5de125918e5f12a6a9b3eae585
+SHA1: ec19d3e49c4cb0c0cd14478176fab6f578477dd1
+SHA256: e3699f751e8759399322dae77e1058d79d3b1472613b8d9d151993591f5b5e7b
+Section: kernel
+Priority: optional
+Description: Linux kernel for Xiaomi Pad 6 (pipa) (latest)
+ This package depends to the latest kernel image available for the Xiaomi Pad 6.
+X-Droidian-Vcs-Revision: 7203113302bbb3102e661aa337d43d30009ea77f
+
