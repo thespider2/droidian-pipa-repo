@@ -1,0 +1,25 @@
+Origin: https://thespider2.github.io/droidian-pipa-repo
+Label: Droidian PKG
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: arm64
+Components: main
+Description: Packages
+Date: Mon, 27 Jul 2026 20:41:32 +0000
+MD5Sum:
+ e7023e9259b4385273b8b59da1299de1              218 Release
+ e9969bbb2b80fc56bc8b9c99e551ce86             6753 main/binary-arm64/Packages
+ 55c6c2f26672b446ee9c97d7e4624a24             1728 main/binary-arm64/Packages.gz
+SHA1:
+ 35b8060d39166bb4d44b4a5854f8affc12983f37              218 Release
+ 8aca54f2cadbb8b3459d9fe6812d3024d6632102             6753 main/binary-arm64/Packages
+ 4be02b379d125e1d69de6097d34640f7da321d17             1728 main/binary-arm64/Packages.gz
+SHA256:
+ 60f973df2cb8b66356c18a84abe4af55c410e9ff470354d443892ea00ba76f7b              218 Release
+ b962c0591e6ef0ee13d984f1d8f8ac3ec2016fccde73bd3115fe0385febe3ff5             6753 main/binary-arm64/Packages
+ 3c9ce145d80e0cafac3dcb3d902fee9df95fad9b655952a7d3758e8f1e936693             1728 main/binary-arm64/Packages.gz
+SHA512:
+ 3756e107fe61b2384db38d0e4e7068089b9aaeaab1320c8f8ea914063a7c8e99100fd7bf4b275683417c66583e9d3e1e3f40d81c98154c1baeac208f24ad4a69              218 Release
+ bc7c1896ee160c5a0c87e9e78aa14122e47a218632ebf64a8859ccc5697dc717e291a88b2c831bab69c99bd4842a4a9c58c6ae0d58442f4c11d3c58fd94b0b2b             6753 main/binary-arm64/Packages
+ 49aad00670857c9412925e3903ece647382bb048f4bbb73b9fa72668e25e024f8f670cdbb2f5fafcbf3f3544f8cb64d9c57636f673f3e2b53945e45efc8029f9             1728 main/binary-arm64/Packages.gz
